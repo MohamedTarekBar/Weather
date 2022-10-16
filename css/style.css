@@ -200,6 +200,7 @@ body {
 .dayContainer {
   background: var(--glassColor);
   border-radius: 10px;
+  min-width: 250px;
   overflow: hidden;
 }
 .dayContainer .head, .dayContainer .footer {
