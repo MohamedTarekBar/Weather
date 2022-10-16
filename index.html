@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="layer-spin position-fixed top-0 bottom-0 start-0 end-0">
+      <div class="spinner-border spinner" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+    <div class="container-fluid m-0 p-0">
+      <div class="layout d-grid">
+        <div
+          class="menu position-fixed top-0 bottom-0 d-flex flex-column align-items-center justify-content-start"
+        >
+          <ul class="menuList weather-section p-0 d-flex flex-column gap-4">
+            <li class="active currentBtn">
+              <a href="#" class="text-white">
+                <i class="bi bi-cloud"></i>
+              </a>
+            </li>
+            <li class="forecastBtn">
+              <a href="#" class="text-white">
+                <i class="bi bi-bar-chart"></i>
+              </a>
+            </li>
+          </ul>
+          <ul class="menuList searchTools p-0 d-flex flex-column gap-4">
+            <li class="searchCity">
+              <a href="#" class="text-white">
+                <i class="bi bi-search"></i>
+              </a>
+            </li>
+            <li class="mapSearch">
+              <a href="#" class="text-white">
+                <i class="bi bi-map"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+          <div class="searchContainer">
+            <input
+              type="text"
+              id="citySearch"
+              class="form-control bg-transparent text-white"
+              placeholder="search by city name or country name"
+              autocomplete="off"
+            />
+            <button type="button" class="btn searchBtn">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+          <div class="mapContainer">
+            <div id="map">
+              <div class="pin">
+                <i class="bi bi-geo-alt"></i>
+              </div>
+              <button type="button" class="btn searchMapBtn">
+                done<i class="bi bi-search"></i>
+              </button>
+            </div>
+          </div>
+          <div class="weather p-4">
+            <div class="digitalInfo">
+              <div id="MyClockDisplay" class="clock mx-1"></div>
+            </div>
+            <div class="current">
+              <div class="dayContainer">
+                <div class="head d-flex gap-5">
+                  <div class="date"></div>
+                  <div class="day"></div>
+                </div>
+                <div class="body">
+                  <div class="tempC"></div>
+                  <div class="tempF"></div>
+                </div>
+                <div class="footer">
+                  <div class="country"></div>
+                  <div class="region"></div>
+                </div>
+              </div>
+            </div>
+            <div class="forecast">
+              <div class="container">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="scripts/pages/index.js" type="module"></script>
+  </body>
+</html>

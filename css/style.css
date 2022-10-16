@@ -1,0 +1,225 @@
+@import url(/css/animation.css);
+@import url(/css/variables.css);
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+@import url(/css/Lib/bootstrap.min.css);
+@import url(/css/Lib/fontawesome.css);
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@500&display=swap');
+@import url('https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css');
+
+.menu {
+  grid-area: menu;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+  background-color: var(--glassColor);
+}
+.menuList {
+  appearance: menulist;
+  background-color: var(--buttonBgColor);
+  height: fit-content;
+  border-radius: 25px;
+}
+.menuList li {
+  list-style: none;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--buttonBgColor);
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 2s;
+}
+.menuList li :hover {
+  animation-name: menuList;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+@keyframes menuList {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.menuList li a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.menuList .active {
+  background-color: white;
+}
+.menuList .active a {
+  color:var(--iconsColor)!important;
+}
+
+body {
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.layer-spin {
+  background-color: rgba(193, 193, 193, 0.224);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.layer-spin .spinner {
+    color: var( --spinnerColor);
+}
+
+.content {
+  grid-area: content;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+  z-index: 9999;
+  position: relative;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 70px calc(100% - 70px);
+  grid-template-areas: "menu content";
+}
+
+.searchContainer {
+  background-color: var(--glassColor);
+  border-radius: 25px;
+  width:80%;
+  margin: auto;
+  opacity: 0;
+  display: none;
+  position: relative;
+}
+
+.searchContainer input, .searchContainer input:focus, .searchContainer input:active{
+  padding: 25px 50px;
+  border: 0;
+  box-shadow: unset;
+  outline: 0;
+}
+
+.digitalInfo {
+  font-size: 1rem;
+  font-family: 'Cairo', sans-serif;
+  padding: 2rem;
+  background-color: var(--glassColor);
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  color:white;
+  border-radius: 25px;
+}
+.currentTemp {
+  font-size: 1.3rem;
+}
+.searchBtn {
+  top: 50%;
+  right: 0;
+  position: absolute;
+  transform: translateY(-50%);
+  margin: 0 20px;
+  color: white;
+}
+.searchBtn:hover,.searchBtn:focus,.searchBtn:active {
+  color: white;
+  border-color: white;
+}
+.weather {
+  /* display: flex;
+  gap: 1rem; */
+}
+.weather .current{
+  width: fit-content;
+  border-radius: 25px;
+  margin: 1rem 0;
+  color: white;
+}
+.mapboxgl-ctrl {
+  display: none !important;
+}
+
+#map {
+  opacity: 0.8;
+  border-radius: 10px;
+  height: 200px;
+  width: 80%;
+  background-color: var(--glassColor);
+  margin: auto;
+  position: relative;
+}
+
+.mapContainer {
+  display: none;
+}
+
+#map .pin {
+  z-index: 1;
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  color: white;
+  transform: translate(50%, -50%);
+  background: var(--glassColor);
+  border-radius: 50%;
+}
+
+#map button {
+  position: absolute;
+  z-index: 1;
+  background: black;
+  height: 40px;
+  color: white;
+  bottom: 0;
+  right: 0;
+  margin: 0.4rem;
+  display: flex;
+  gap: 0.5rem ;
+  border-radius: 10px;
+}
+
+.dayContainer {
+  background: var(--glassColor);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.dayContainer .head, .dayContainer .footer {
+  background-color: white;
+  color: rgb(14, 14, 15);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.dayContainer .body {
+  padding: 1rem;
+}
+.forecast .container {
+  width: fit-content;
+  border-radius: 25px;
+  margin: 1rem 0;
+  color: white;
+  flex-wrap: wrap;
+  display: flex; gap: 1rem;
+}
+.forecast {
+  display: none;
+}

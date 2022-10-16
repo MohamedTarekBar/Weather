@@ -1,0 +1,57 @@
+/* indicator */
+
+.indicator {
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.balls {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    animation-name: indicator;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.ball {
+    background-image: linear-gradient(-45deg, #4481eb 0%, #04befe 100%);
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    animation-name: ball;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes indicator {
+    0% {
+        gap: 5px;
+    }
+
+    50% {
+        gap: 25px;
+    }
+
+    100% {
+        gap: 5px
+    }
+}
+
+@keyframes ball {
+    0% {
+        height: 25px;
+        width: 25px;
+    }
+
+    50% {
+        height: 28px;
+        width: 28px;
+    }
+
+    100% {
+        height: 25px;
+        width: 25px;
+    }
+}
