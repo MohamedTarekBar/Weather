@@ -1,5 +1,5 @@
 'use strict';
-import '/scripts/Lib/bootstrap.bundle.min.js';
+import '../Lib/bootstrap.bundle.min.js';
 import 'https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js';
 import { WeatherApi , getImageForCity } from '../Api/api.js';
 import { showTime, convertTimeEpoch, getDayName } from '../utility.js';
