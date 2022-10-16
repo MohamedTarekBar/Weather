@@ -221,6 +221,7 @@ body {
   color: white;
   flex-wrap: wrap;
   display: flex; gap: 1rem;
+  padding: 0;
 }
 .forecast {
   display: none;
