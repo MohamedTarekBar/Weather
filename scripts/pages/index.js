@@ -1,9 +1,8 @@
 'use strict';
-import {WeatherApi} from '/scripts/Api/api.js';
-import {getImageForCity} from '/scripts/Api/api.js';
 import '/scripts/Lib/bootstrap.bundle.min.js';
 import 'https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js';
-import {showTime, convertTimeEpoch, getDayName} from '/scripts/utility.js';
+import { WeatherApi , getImageForCity } from '../Api/api.js';
+import { showTime, convertTimeEpoch, getDayName } from '../utility.js';
 
 let weather = new WeatherApi ();
 var map;
