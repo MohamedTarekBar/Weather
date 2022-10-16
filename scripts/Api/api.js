@@ -1,6 +1,6 @@
 class WeatherApi {
   constructor () {
-    this.baseUrl = 'http://api.weatherapi.com/v1/';
+    this.baseUrl = 'https://api.weatherapi.com/v1/';
     this.Apikey = 'key=4615d98babb24f8d8f7101245221510&';  
     this.qKey = 'q=';
     this.days = '&days=7'
